@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 30% 15%;
+
+    --primary: 215 45% 18%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 25% 93%;
+    --secondary-foreground: 215 30% 15%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 174 60% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 174 60% 35%;
+
+    --radius: 0.5rem;
+
+    --ocean-deep: 215 50% 12%;
+    --ocean-mid: 200 45% 22%;
+    --ocean-light: 195 40% 35%;
+    --teal: 174 60% 35%;
+    --teal-light: 174 45% 55%;
+    --teal-glow: 174 80% 45%;
+    --slate-warm: 215 15% 55%;
+    --sand: 35 30% 92%;
+    --gold: 40 70% 50%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 215 50% 8%;
+    --foreground: 210 40% 92%;
+    --card: 215 45% 12%;
+    --card-foreground: 210 40% 92%;
+    --popover: 215 45% 12%;
+    --popover-foreground: 210 40% 92%;
+    --primary: 210 40% 92%;
+    --primary-foreground: 215 45% 12%;
+    --secondary: 215 30% 18%;
+    --secondary-foreground: 210 40% 92%;
+    --muted: 215 30% 18%;
+    --muted-foreground: 215 15% 60%;
+    --accent: 174 60% 40%;
+    --accent-foreground: 0 0% 100%;
+    --border: 215 30% 22%;
+    --input: 215 30% 22%;
+    --ring: 174 60% 40%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient-ocean {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--teal)) 0%, hsl(var(--ocean-light)) 100%);
+  }
+
+  .bg-ocean-gradient {
+    background: linear-gradient(180deg, hsl(var(--ocean-deep)) 0%, hsl(var(--ocean-mid)) 50%, hsl(var(--primary)) 100%);
+  }
+
+  .bg-section-alt {
+    background: linear-gradient(180deg, hsl(var(--muted)) 0%, hsl(var(--background)) 100%);
+  }
+
+  .border-teal {
+    border-color: hsl(var(--teal));
+  }
+
+  .glow-teal {
+    box-shadow: 0 0 20px hsl(var(--teal) / 0.15), 0 0 40px hsl(var(--teal) / 0.05);
+  }
+
+  .card-elevated {
+    @apply bg-card rounded-lg border;
+    box-shadow: 0 4px 20px hsl(var(--ocean-deep) / 0.06), 0 1px 3px hsl(var(--ocean-deep) / 0.04);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  .wave-divider {
+    position: relative;
+  }
+
+  .wave-divider::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'%3E%3Cpath fill='%23f5f7fa' d='M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z'/%3E%3C/svg%3E") no-repeat bottom;
+    background-size: cover;
+  }
+}
