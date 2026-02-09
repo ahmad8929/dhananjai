@@ -7,6 +7,7 @@ import AwardsSection from "@/components/AwardsSection";
 import PublicationsSection from "@/components/PublicationsSection";
 import CollaborationSection from "@/components/CollaborationSection";
 import StatsSection from "@/components/StatsSection";
+import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
       <PublicationsSection />
       <CollaborationSection />
       <StatsSection />
+      <TeamSection />
       <Footer />
     </div>
   );

@@ -29,7 +29,7 @@ const HeroSection = () => {
             <img
               src={profileImage}
               alt="Prof. Dhananjai K. Pandey"
-              className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover border-4 border-teal/40 shadow-xl"
+              className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover border-4 border-accent/40 shadow-xl"
             />
           </motion.div>
 
@@ -46,15 +46,15 @@ const HeroSection = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="inline-block mb-6"
             >
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-accent/20 text-teal-light border border-teal/30 backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-teal-glow animate-pulse" />
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-accent/20 text-accent border border-accent/30 backdrop-blur-sm">
+                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 Marine Geoscientist · Oceanographer · Seismologist
               </span>
             </motion.div>
 
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-4">
               Prof. Dhananjai K.{" "}
-              <span className="text-gradient-ocean">Pandey</span>
+              <span className="text-sky-blue">Pandey</span>
             </h1>
 
             <p className="font-display text-xl md:text-2xl text-primary-foreground/80 mb-3 italic">

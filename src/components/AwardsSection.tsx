@@ -73,7 +73,7 @@ const AwardsSection = () => {
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.4, delay: 0.1 * i }}
               className={`card-elevated p-5 text-center group hover:-translate-y-1 transition-all ${
-                award.highlight ? "border-accent/30 glow-teal" : ""
+                award.highlight ? "border-accent/30 glow-accent" : ""
               }`}
             >
               <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
