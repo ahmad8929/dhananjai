@@ -53,8 +53,8 @@ const HeroSection = () => {
             </motion.div>
 
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-4">
-              Prof. Dhananjai K.{" "}
-              <span className="text-sky-blue">Pandey</span>
+              Prof. Dhananjai K.{" "} Pandey
+              {/* <span className="text-sky-blue">Pandey</span> */}
             </h1>
 
             <p className="font-display text-xl md:text-2xl text-primary-foreground/80 mb-3 italic">
