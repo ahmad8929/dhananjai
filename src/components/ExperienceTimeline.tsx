@@ -18,53 +18,55 @@ const ExperienceTimeline = () => {
 
   return (
     <section id="experience" className="section-padding bg-section-alt" ref={ref}>
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-4xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
             Experience
           </h2>
-          <div className="w-16 h-1 bg-accent rounded-full mb-12" />
+          <div className="w-16 h-1 bg-accent rounded-full mb-8 md:mb-12" />
         </motion.div>
 
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
+        <div className="relative pl-6 md:pl-0">
+          {/* Vertical line - positioned on left for mobile, center for desktop */}
+          <div className="absolute left-3 md:left-1/2 top-0 bottom-0 w-0.5 bg-accent md:-translate-x-px" />
 
           {experiences.map((exp, i) => {
             const isLeft = i % 2 === 0;
             return (
               <motion.div
                 key={`${exp.year}-${exp.role}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.15 * i }}
-                className={`relative flex items-start mb-8 last:mb-0 ${
-                  isLeft ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.1 * i }}
+                className="relative flex items-start mb-5 md:mb-8 last:mb-0"
               >
-                {/* Dot */}
-                <div className="absolute left-6 md:left-1/2 w-3 h-3 rounded-full bg-accent border-2 border-background -translate-x-1.5 mt-5 z-10" />
+                {/* Dot - positioned on timeline */}
+                <div className="absolute left-3 md:left-1/2 w-3 h-3 rounded-full bg-accent border-2 border-background -translate-x-1.5 mt-2 md:mt-2.5 z-10" />
 
-                {/* Content card */}
+                {/* Content card - positioned to right on mobile, alternating on desktop */}
                 <div
-                  className={`ml-14 md:ml-0 md:w-[calc(50%-2rem)] card-elevated p-5 ${
-                    isLeft ? "md:mr-auto md:pr-6" : "md:ml-auto md:pl-6"
+                  className={`ml-8 md:ml-0 md:w-[calc(50%-2rem)] w-[calc(100%-2rem)] ${
+                    isLeft ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
                   }`}
                 >
-                  <div className="flex items-center gap-3 mb-2">
-                    <Briefcase size={16} className="text-accent flex-shrink-0" />
-                    <span className="text-xs font-semibold text-accent tracking-wider uppercase">
-                      {exp.year}
-                    </span>
+                  <div className="card-elevated rounded-xl p-4 md:p-5">
+                    <div className="flex items-center gap-2.5 md:gap-3 mb-2">
+                      <Briefcase size={18} className="text-accent flex-shrink-0" />
+                      <span className="text-sm md:text-base font-semibold text-accent tracking-wide">
+                        {exp.year}
+                      </span>
+                    </div>
+                    <h3 className="font-display text-base md:text-lg font-semibold text-foreground mb-1.5">
+                      {exp.role}
+                    </h3>
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                      {exp.org}
+                    </p>
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-foreground">
-                    {exp.role}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{exp.org}</p>
                 </div>
               </motion.div>
             );
