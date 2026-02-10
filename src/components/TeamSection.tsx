@@ -158,7 +158,7 @@ const TeamSection = () => {
                       </div>
                       <div className="text-sm space-y-1">
                         <div><strong>Education:</strong> Master's, Environmental Science, JNU (Sep 2023 - Dec 2025) | B.Sc. (Hons.), Rani Lakshmi Bai Central Agricultural University (2018 - 2022)</div>
-                        <div><strong>Profile:</strong> Environmental science research aspirant</div>
+                        <div><strong>Profile:</strong> Environmental science</div>
                         <div><strong>Location:</strong> Delhi, India</div>
                       </div>
                     </div>
