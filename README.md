@@ -6,6 +6,7 @@ Professional website for Prof. Dhananjai K. Pandey, Distinguished Marine Geoscie
 
 This website showcases the academic achievements, research, publications, and professional profile of Prof. Dhananjai K. Pandey, who holds the distinction of being the first Indian to lead an International Ocean Discovery Program (IODP) expedition.
 
+## Portfolio Link - https://dhananjai.vercel.app
 ## Technologies
 
 This project is built with:
