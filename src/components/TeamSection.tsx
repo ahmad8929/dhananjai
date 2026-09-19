@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Linkedin, Mail } from "lucide-react";
-import mayuriImage from "@/assets/mayuri.png";
 import divyanshImage from "@/assets/divyansh.png";
 import yashikaImage from "@/assets/yashika.png";
 import bhanuImage from "@/assets/bhanupratap.png";
@@ -161,52 +160,6 @@ const TeamSection = () => {
                 Ph.D Scholars
               </h3>
               <div className="space-y-4">
-                {/* Mayuri Nishad */}
-                <MemberCard
-                  name="Mayuri Nishad"
-                  subtitle="Ph.D Scholar"
-                  image={mayuriImage}
-                  links={[
-                    {
-                      type: "email",
-                      label: "mayuri.ssmm14@gmail.com",
-                      href: "mailto:mayuri.ssmm14@gmail.com",
-                    },
-                    {
-                      type: "linkedin",
-                      label: "LinkedIn",
-                      href: "https://in.linkedin.com/in/mayurinishad",
-                    },
-                  ]}
-                  points={
-                    <>
-                      <div>
-                        <strong>Education:</strong> B.Tech (Chemical Engineering) (2020–24)
-                        <br />
-                        University School of Chemical Technology (GGSIPU Delhi){" "}
-                        <span className="text-accent">
-                          <strong>[Silver Medalist]</strong>
-                        </span>
-                      </div>
-                      <div className="mt-2">
-                        <strong>Experience:</strong> Ex Reliance Industries Limited, JMD (2024–25)
-                        <br />
-                        GET Chemical Engineer, Utilities and ETP Department
-                      </div>
-                      <div className="mt-2">
-                        <strong>GATE 2024:</strong> AIR 1102
-                        <br />
-                        <strong>NET (Environmental Science):</strong> June’25 – 97.4 percentile &nbsp;|&nbsp; Dec’25 – 99.29+ percentile
-                      </div>
-                      <div className="mt-2">
-                        <strong>Current:</strong> Joined Ph.D at JNU SES (September 2025)
-                        <br />
-                        <strong>Research Interest:</strong> TBD
-                      </div>
-                    </>
-                  }
-                />
-
                 {/* Yashika Singh */}
                 <MemberCard
                   name="Yashika Singh"
